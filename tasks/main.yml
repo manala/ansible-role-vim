@@ -1,0 +1,11 @@
+---
+
+# Install
+- import_tasks: install.yml
+  tags:
+    - manala_vim
+
+# Config
+- import_tasks: config.yml
+  tags:
+    - manala_vim

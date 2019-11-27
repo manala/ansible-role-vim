@@ -1,0 +1,14 @@
+---
+
+- name: "{{ test }}"
+  hosts: debian
+  become: true
+  vars:
+    manala_vim_config:
+      - encoding:  utf8
+      - expandtab: true
+  roles:
+    - manala.vim
+  post_tasks:
+    - name: Goss
+      command: goss --gossfile {{ test }}.goss.yml validate
